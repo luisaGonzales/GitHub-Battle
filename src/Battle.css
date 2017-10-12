@@ -1,0 +1,35 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+}
+
+.column label, .header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.inputPlayers{
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,.43);
+    font-size: 16px;
+    width: 80%;
+    
+}
+
+.button {
+    color: #e6e6e6;
+    background: #0a0a0a;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 200px;
+    text-align: center;
+    display: block;
+    padding: 7px 0;
+    margin: 10px auto;
+}

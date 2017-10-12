@@ -2,15 +2,16 @@
   "name": "github-battle",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://luisaGonzales.github.io/GitHub-Battle",
+  "homepage": "http://luisaGonzales.github.io/GitHub-Battle",
   "dependencies": {
+    "axios": "^0.16.2",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
