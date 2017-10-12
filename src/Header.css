@@ -1,0 +1,26 @@
+ul {
+    padding: 0;
+    margin: 16px;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #d0021b;
+}
+
+.main-nav{
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 15px;
+}
+
+li {
+    list-style-type: none;
+}

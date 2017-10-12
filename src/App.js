@@ -7,6 +7,7 @@ import {
 	Redirect
 } from 'react-router-dom'
 import ReactBootstrap from 'react-bootstrap'
+import './App.css'
 
 import Header from './Header';
 import Home from './Home';
@@ -25,7 +26,7 @@ const App = (props) => {
 	console.log('app.props', props)
 	return (
   <BrowserRouter>
-		<div>
+		<div className="container">
       <Header />
 			<Switch>
 				<Route exact path="/"

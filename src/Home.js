@@ -6,8 +6,8 @@ import ReactBootstrap from 'react-bootstrap'
 
 const Home = ({model}) => {
     return (
-        <div>
-            <h1 className="titleHome">Github Battle: Battle your friends... and stuff.</h1>
+        <div className="home-container">
+            <h1 className="titleHome text-center">Github Battle: Battle your friends... and stuff.</h1>
             <NavLink to="/battle">
                 <Button bsSize="large" block className="btnHome">Battle</Button>
             </NavLink>
