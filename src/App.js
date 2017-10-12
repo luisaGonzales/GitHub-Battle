@@ -1,41 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import {
-  Breadcrumb,
-  Item
-} from 'react-bootstrap';
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 import ReactBootstrap from 'react-bootstrap'
- 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Breadcrumb>
-    <Breadcrumb.Item href="#">
-      Home
-    </Breadcrumb.Item>
-    <Breadcrumb.Item href="http://getbootstrap.com/components/#breadcrumbs">
-      Library
-    </Breadcrumb.Item>
-    <Breadcrumb.Item active>
-      Data
-    </Breadcrumb.Item>
-  </Breadcrumb>
-      </div>
-    );
-  }
+
+import Header from './Header';
+import Home from './Home';
+import Battle from './Battle';
+import Popular from './Popular';
+
+
+const NotFound = (props) => {
+	return (
+		<div><h2> Error 404! </h2></div>
+	);
 }
-// const breadcrumbInstance = (
 
-// );
+const App = (props) => {
+	const {model} =  props;
+	console.log('app.props', props)
+	return (
+  <BrowserRouter>
+		<div>
+      <Header />
+			<Switch>
+				<Route exact path="/"
+				       render={() => <Redirect to= {'/home'}/>}/>
+				<Route path="/GitHub-Battle"
+				       render={() => <Redirect to= {'/home'}/>}/>
+				<Route  path="/home" render={() => <Home model={model} />}/>
+        <Route  path="/battle" render={() => <Battle model={model} />}/>
+        <Route  path="/popular" render={() => <Popular model={model} />}/>
+				<Route component={NotFound}/>
+			</Switch>
+		</div>
+	</BrowserRouter>)
+}
 
-// ReactDOM.render(breadcrumbInstance, mountNode);
 export default App;
+
