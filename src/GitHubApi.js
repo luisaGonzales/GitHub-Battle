@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+//Obtiene el link del usuario ingresado
 function getProfile(username) {
     return axios.get('https://api.github.com/users/' + username)
         .then(function (user) {
@@ -29,7 +30,7 @@ function handleError(error) {
     return null;
 }
 
-function getUserData(player) {
+export function getUserData(player) {
     return axios.all([
         getProfile(player),
         getRepos(player)
@@ -44,7 +45,7 @@ function getUserData(player) {
     })
 }
 
-function sortPlayers(players) {
+export function sortPlayers(players) {
     return players.sort(function (a, b) {
         return b.score - a.score;
     });

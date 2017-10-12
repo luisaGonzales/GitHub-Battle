@@ -23,7 +23,6 @@ const NotFound = (props) => {
 
 const App = (props) => {
 	const {model} =  props;
-	console.log('app.props', props)
 	return (
   <BrowserRouter>
 		<div className="container">
