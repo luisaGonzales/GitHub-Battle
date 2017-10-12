@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import Model from './Model';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const model = new Model();
+const render = () => {
+	ReactDOM.render(<App model = {model}/>, document.getElementById('root'));
+}
+model.subscribe(render);
+render();
+
 registerServiceWorker();
