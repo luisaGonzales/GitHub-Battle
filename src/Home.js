@@ -7,8 +7,10 @@ import ReactBootstrap from 'react-bootstrap'
 const Home = ({model}) => {
     return (
         <div>
-            <h1>Github Battle: Battle your friends... and stuff.</h1>
-            <Button bsSize="large" block>Block level button</Button>
+            <h1 className="titleHome">Github Battle: Battle your friends... and stuff.</h1>
+            <NavLink to="/battle">
+                <Button bsSize="large" block className="btnHome">Battle</Button>
+            </NavLink>
         </div>
     );
 }
