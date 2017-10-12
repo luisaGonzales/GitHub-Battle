@@ -1,0 +1,18 @@
+.languages {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    padding: 0;
+}
+
+.languages li {
+    margin: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
