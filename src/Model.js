@@ -32,7 +32,7 @@ class Model {
         }); 
         console.log(this.playerOne);
         if(this.infoPlayerOne!=null){
-            console.log(this.infoPlayerOne.profile.login);
+            console.log(this.infoPlayerOne);
         }
         
     }

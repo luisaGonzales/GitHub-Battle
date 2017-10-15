@@ -29,6 +29,7 @@ const Battle = ({model}) => {
                             <button className="button" type="submit">
                                 Submit
                             </button>
+                            
                         </form>
                     </Col>
                     <Col xs={6} md={6}>
@@ -36,6 +37,7 @@ const Battle = ({model}) => {
                             className="colum"
                             onSubmit={(e) => {
                             e.preventDefault();
+                            model.getInformation(e, model.playerTwo);
                         }}>
                             <label htmlFor="username" className="header text-center">Player Two</label>
                             <input
